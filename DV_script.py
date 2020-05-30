@@ -15,15 +15,16 @@ timesData = pd.read_csv("timesData.csv")
 
 """ Bar Plot """
 
+# citations and teaching of top 5 universities in 2014 
 
 # prepare data frame
-df2015 = timesData[timesData.year == 2015].iloc[:5,:]
+df2014 = timesData[timesData.year == 2014].iloc[:5,:]
 
 
 # create trace1 
 trace1 = go.Bar(
-                x = df2015.institution,
-                y = df2015.citations,
+                x = df2014.institution,
+                y = df2014.citations,
                 name = "citations",
                 marker = dict(color = 'rgba(255, 174, 255, 0.5)',
                               line=dict(color='rgb(0,0,0)',width=1.5))
@@ -31,8 +32,8 @@ trace1 = go.Bar(
 
 # create trace2 
 trace2 = go.Bar(
-                x = df2015.institution,
-                y = df2015.publications,
+                x = df2014.institution,
+                y = df2014.publications,
                 name = "publications",
                 marker = dict(color = 'rgba(255, 255, 128, 0.5)',
                               line=dict(color='rgb(0,0,0)',width=1.5))
