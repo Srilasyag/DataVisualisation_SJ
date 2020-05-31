@@ -15,7 +15,7 @@ timesData = pd.read_csv("timesData.csv")
 
 """ Bar Plot """
 
-# citations and teaching of top 5 universities in 2014 
+# citations and publications of top 5 universities in 2014 
 
 # prepare data frame
 df2014 = timesData[timesData.year == 2014].iloc[:5,:]
@@ -49,7 +49,7 @@ plotly.offline.plot(fig,filename="barplot.html")
 
 
 """ Scatter Plot """
-import plotly.graph_objs as go
+# import plotly.graph_objs as go
 
 
 # Citation vs world rank of top 100 universities with 2014, 2015 and 2016 years
